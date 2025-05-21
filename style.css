@@ -513,6 +513,198 @@ body {
     }
 }
 
+@media (max-width: 900px) {
+    .content-container {
+        max-width: 98vw;
+        padding: 8px;
+    }
+    .profile-card {
+        padding: 12px 6px;
+        border-radius: 14px;
+        min-width: unset;
+    }
+    .gamepad-btn {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        font-size: 17px;
+    }
+    .gamepad-card {
+        top: 60px;
+        right: 10px;
+        min-width: 160px;
+        border-radius: 12px;
+        padding: 0;
+    }
+    .gamepad-card-content {
+        padding: 14px 12px 12px 12px;
+    }
+    .avatar-container {
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+    }
+    .avatar {
+        width: 100%;
+        height: 100%;
+    }
+    .username {
+        font-size: 18px;
+    }
+    .badges {
+        font-size: 14px;
+    }
+    .bio {
+        font-size: 12px;
+    }
+    .discord-profile, .discord-server {
+        padding: 8px;
+        border-radius: 10px;
+    }
+    .discord-avatar, .server-icon {
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
+    }
+    .social-links {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+    .social-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 15px;
+    }
+    .stats {
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+    .stat-item {
+        font-size: 11px;
+    }
+    .music-player {
+        padding: 8px;
+        border-radius: 10px;
+    }
+    .album-cover {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+    .song-title {
+        font-size: 12px;
+    }
+    .song-timeline {
+        gap: 4px;
+    }
+    .current-time, .total-time {
+        font-size: 10px;
+    }
+    .timeline {
+        height: 3px;
+    }
+    .controls {
+        gap: 8px;
+    }
+    .prev-btn, .play-pause-btn, .next-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-container {
+        max-width: 100vw;
+        padding: 2px;
+    }
+    .profile-card {
+        padding: 6px 2px;
+        border-radius: 8px;
+    }
+    .gamepad-btn {
+        top: 4px;
+        right: 4px;
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+    }
+    .gamepad-card {
+        top: 38px;
+        right: 2px;
+        min-width: 120px;
+        border-radius: 8px;
+    }
+    .gamepad-card-content {
+        padding: 8px 6px 8px 6px;
+    }
+    .avatar-container {
+        width: 32px;
+        height: 32px;
+        margin-right: 6px;
+    }
+    .username {
+        font-size: 13px;
+    }
+    .badges {
+        font-size: 10px;
+    }
+    .bio {
+        font-size: 9px;
+    }
+    .discord-profile, .discord-server {
+        padding: 4px;
+        border-radius: 6px;
+    }
+    .discord-avatar, .server-icon {
+        width: 18px;
+        height: 18px;
+        margin-right: 4px;
+    }
+    .social-links {
+        gap: 4px;
+        margin-bottom: 6px;
+    }
+    .social-icon {
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+    }
+    .stats {
+        gap: 4px;
+        margin-bottom: 6px;
+    }
+    .stat-item {
+        font-size: 8px;
+    }
+    .music-player {
+        padding: 4px;
+        border-radius: 6px;
+    }
+    .album-cover {
+        width: 18px;
+        height: 18px;
+        margin-right: 4px;
+    }
+    .song-title {
+        font-size: 8px;
+    }
+    .song-timeline {
+        gap: 2px;
+    }
+    .current-time, .total-time {
+        font-size: 7px;
+    }
+    .timeline {
+        height: 2px;
+    }
+    .controls {
+        gap: 4px;
+    }
+    .prev-btn, .play-pause-btn, .next-btn {
+        font-size: 9px;
+    }
+}
+
 #rain-canvas {
     position: absolute;
     top: 0;
