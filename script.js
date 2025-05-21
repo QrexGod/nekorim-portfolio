@@ -71,25 +71,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // 3D Tilt effect
     const profileCard = document.getElementById('profileCard');
     if (profileCard) {
+        // Включаем мягкую тряску по умолчанию
+        profileCard.classList.add('soft-shake-card');
         const maxTilt = 10; // Maximum tilt in degrees
         const perspective = 1000;
 
         profileCard.addEventListener('mousemove', function(e) {
+            // Отключаем тряску при наведении
+            profileCard.classList.remove('soft-shake-card');
             const rect = profileCard.getBoundingClientRect();
             const centerX = rect.left + rect.width / 2;
             const centerY = rect.top + rect.height / 2;
-            
             // Calculate the percentage position of the mouse
             const percentX = (e.clientX - centerX) / (rect.width / 2);
             const percentY = (e.clientY - centerY) / (rect.height / 2);
-            
             // Calculate the tilt angle
             const tiltX = -percentY * maxTilt;
             const tiltY = percentX * maxTilt;
-            
             // Apply the tilt effect
             profileCard.style.transform = `perspective(${perspective}px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-            
             // Make cursorFollower bigger when hovering over the card - only if element exists
             if (cursorFollower) {
                 cursorFollower.style.transform = 'scale(1.5)';
@@ -102,6 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (cursorFollower) {
                 cursorFollower.style.transform = 'scale(1)';
             }
+            // Включаем мягкую тряску обратно
+            profileCard.classList.add('soft-shake-card');
+        });
+        profileCard.addEventListener('mouseenter', function() {
+            // Отключаем тряску при наведении
+            profileCard.classList.remove('soft-shake-card');
         });
     }
 
@@ -162,7 +168,9 @@ document.addEventListener('DOMContentLoaded', function() {
         function step(now) {
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            audioPlayer.volume = startVolume + (targetVolume - startVolume) * progress;
+            let newVolume = startVolume + (targetVolume - startVolume) * progress;
+            newVolume = Math.max(0, Math.min(1, newVolume)); // Ограничение диапазона
+            audioPlayer.volume = newVolume;
             if (progress < 1) {
                 requestAnimationFrame(step);
             } else {
